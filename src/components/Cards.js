@@ -4,12 +4,16 @@ import React from 'react';
 import Card from './Card'
 
 const Cards = (props) => {
-    console.log("cards props", props)
-    const questions = props.triviaQuestions.map(trivia => {
-        return <Card question={ trivia.question } answer={ trivia.answer } key={ trivia.id } />
-    })
+    // console.log("cards props", props) to ensure they are being passed to this component
+
+    //assign map function to questions variable
+    //map through props to pass question, answer, and key (question id) props to Card component
+    // const trivia = 
+    
     return (
-        <div>{ questions }</div>
+        <div>
+        {/* refer to trivia variable here to render card components */}
+        </div>
 
     );
 }
