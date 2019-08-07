@@ -1,24 +1,35 @@
 import React from 'react';
 import './App.css';
 
+import NavBar from './components/Navbar'
+import Cards from './components/Cards'
+
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
-      data: null,
+      triviaQuestions: []
     };
   }
 
   componentDidMount() {
-    fetch('https://api.chucknorris.io/jokes/random')
+    fetch('http://jservice.io/api/clues')
       .then(response => response.json())
-      .then(data => this.setState({ data }));
+      .then(triviaQuestions => this.setState({ triviaQuestions }));
   }
+
+
   render() {
     console.log("state", this.state)
+
     return (
+
+
       <div className="App" >
+        <NavBar />
+
+        <Cards triviaQuestions={ this.state.triviaQuestions } />
 
       </div>
     );
