@@ -1,39 +1,28 @@
 import React from 'react';
 import './App.css';
-
-import NavBar from './components/Navbar'
-import Cards from './components/Cards'
-
-class App extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      triviaQuestions: []
-    };
-  }
-
-  componentDidMount() {
-    fetch('http://jservice.io/api/clues')
-      .then(response => response.json())
-      .then(triviaQuestions => this.setState({ triviaQuestions }));
-  }
+import Navbar from './components/Navbar'
+import About from './components/About'
 
 
-  render() {
-    console.log("state", this.state)
-
-    return (
+// this component needs to hold state - how should we refactor?
+const App = () => {
 
 
-      <div className="App" >
-        <NavBar />
+  // componentDidMount() {
+  // fetch here 
+  // }
 
-        <Cards triviaQuestions={ this.state.triviaQuestions } />
 
-      </div>
-    );
-  }
+  return (
+
+
+    <div className="App" >
+      <Navbar />
+      {/* component code here */ }
+
+    </div>
+  );
+
 }
 
 export default App;
