@@ -19,7 +19,7 @@ class Card extends React.Component {
 
         return (
             <div className="card">
-                <img className="card-img-top" src="http://www.sporcle.com/blog/wp-content/uploads/2018/10/1-48.jpg" alt="Card image cap" />
+                <img className="card-img-top" alt="trivia-pic" src="http://www.sporcle.com/blog/wp-content/uploads/2018/10/1-48.jpg" alt="Card image cap" />
                 <div className="card-body" key={ this.props.id }>
                     <h5 className="card-title">Question #{ this.props.id }</h5>
                     <p className="card-text">{ this.props.question }</p>
