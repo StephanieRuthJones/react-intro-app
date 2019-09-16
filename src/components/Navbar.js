@@ -21,8 +21,8 @@ const NavBar = (props) => {
                     </ul>
                 </nav>
 
-                <Route path="/trivia/" exact component={ App.js } />
-                <Route path="/about/" component={ About } />
+                <Route path="/trivia/" exact component={App.js} />
+                <Route path="/about/" component={About} />
 
             </div>
         </Router>

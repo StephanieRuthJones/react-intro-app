@@ -8,16 +8,11 @@
 
 }
 
-.nav-div{
+.navbar{
+  height: 30px;
   width: 100%;
-}
-
-.navbar {
-  width: 100%;
-}
-
-.row-fluid {
-  display: flex;
+  flex-direction: row;
+  font-size: 10px;
 }
 
 .card {
